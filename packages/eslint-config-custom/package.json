@@ -1,0 +1,24 @@
+{
+  "name": "eslint-config-custom",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.cjs",
+  "scripts": {
+    "lint:cspell": "cspell \"**\"",
+    "lint:prettier": "prettier --check --ignore-path=../../.prettierignore .",
+    "lint": "concurrently pnpm:lint:*",
+    "format:prettier": "prettier --write --ignore-path=../../.prettierignore .",
+    "format": "concurrently pnpm:format:*"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-turbo": "^1.10.14",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsdoc": "^44.2.7",
+    "eslint-plugin-svelte": "^2.33.1",
+    "eslint-plugin-unused-imports": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
